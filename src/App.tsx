@@ -1,34 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import Features from './components/Features'
+import Products from './components/Products'
+import Testimonials from './components/Testimonials'
+import Footer from './components/Footer'
+import Cart from './components/Cart'
+import ProductPage from './components/ProductPage'
+import { CartProvider } from './contexts/CartContext'
+import { LanguageProvider } from './contexts/LanguageContext'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <LanguageProvider>
+      <ThemeProvider>
+        <CartProvider>
+          <Router>
+            <div className="min-h-screen bg-gray-50 relative">
+              <Header setIsCartOpen={setIsCartOpen} />
+              <Routes>
+                <Route path="/" element={
+                  <>
+                    <Hero />
+                    <Features />
+                    <Products setIsCartOpen={setIsCartOpen} />
+                    <Testimonials />
+                  </>
+                } />
+                <Route path="/product/:id" element={<ProductPage setIsCartOpen={setIsCartOpen} />} />
+              </Routes>
+              <Footer />
+              {isCartOpen && <Cart onClose={() => setIsCartOpen(false)} />}
+            </div>
+          </Router>
+        </CartProvider>
+      </ThemeProvider>
+    </LanguageProvider>
   )
 }
 
