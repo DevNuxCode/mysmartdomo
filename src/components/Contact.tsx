@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-1">{t('contact.message')}</label>
-              <textarea
+               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
@@ -115,6 +115,8 @@ const Contact: React.FC = () => {
                 rows={4}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
+              
+              
             </div>
             <div>
               <button

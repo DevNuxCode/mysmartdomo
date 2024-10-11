@@ -19,6 +19,7 @@ export const translations = {
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.getStarted': 'Get Started',
+    'nav.blog': "Blog",
     //hero
     'hero.title': 'Transform Your Home with SmartDomo',
     'hero.subtitle': 'Experience the future of living with our cutting-edge smart home solutions',
@@ -79,7 +80,13 @@ export const translations = {
     'contact.address': 'Address',
     'contact.message': 'Message',
     'contact.submit': 'Submit Request',
-    'contact.submitSuccess': 'Your request has been submitted successfully. We\'ll get back to you soon!'
+    'contact.submitSuccess': 'Your request has been submitted successfully. We\'ll get back to you soon!',
+    //blog
+    'blog.title': 'SmartHaven Blog',
+    'blog.readMore': 'Read More',
+    'blog.backToBlog': 'Back to Blog',
+    'blog.publishedOn': 'Published on',
+    'blog.by': 'by',
   },
   es: {
     //nav
@@ -89,6 +96,7 @@ export const translations = {
     'nav.about': 'Acerca de',
     'nav.contact': 'Contacto',
     'nav.getStarted': 'Comenzar',
+    'nav.blog': "Articulos",
     //Cabecera
     'hero.title': 'Transforma tu hogar con SmartDomo',
     'hero.subtitle': 'Experimenta el futuro de la vida con nuestras soluciones inteligentes de vanguardia',
@@ -149,7 +157,13 @@ export const translations = {
     'contact.address': 'Dirección',
     'contact.message': 'Mensaje',
     'contact.submit': 'Enviar Solicitud',
-    'contact.submitSuccess': '¡Tu solicitud ha sido enviada con éxito. Nos pondremos en contacto contigo pronto!'
+    'contact.submitSuccess': '¡Tu solicitud ha sido enviada con éxito. Nos pondremos en contacto contigo pronto!',
+    //blog
+    'blog.title': 'Blog de SmartHaven',
+    'blog.readMore': 'Leer Más',
+    'blog.backToBlog': 'Volver al Blog',
+    'blog.publishedOn': 'Publicado el',
+    'blog.by': 'por',
   },
 };
 

@@ -10,6 +10,8 @@ import Cart from './components/Cart'
 import ProductPage from './components/ProductPage'
 import Contact from './components/Contact'
 import About from './components/About'
+import Blog from './components/Blog'
+import BlogPost from './components/BlogPost'
 import { CartProvider } from './contexts/CartContext'
 import { LanguageProvider } from './contexts/LanguageContext'
 import { ThemeProvider } from './contexts/ThemeContext'
@@ -36,6 +38,8 @@ function App() {
                 <Route path="/product/:id" element={<ProductPage setIsCartOpen={setIsCartOpen} />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:id" element={<BlogPost />} />
               </Routes>
               <Footer />
               {isCartOpen && <Cart onClose={() => setIsCartOpen(false)} />}

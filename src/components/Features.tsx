@@ -48,7 +48,7 @@ const Features = () => {
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center">
               <div className="flex justify-center mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <h3 className="text-blue-900 text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}

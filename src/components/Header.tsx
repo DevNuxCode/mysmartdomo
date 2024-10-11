@@ -48,6 +48,7 @@ const Header: React.FC<HeaderProps> = ({ setIsCartOpen }) => {
           <Link to="/" className="hover:text-blue-600">{t('nav.services')}</Link>
           <Link to="/about" className="hover:text-blue-600">{t('nav.about')}</Link>
           <Link to="/contact" className="hover:text-blue-600">{t('nav.contact')}</Link>
+          <Link to="/blog" className="hover:text-blue-600">{t('nav.blog')}</Link>
         </div>
         <div className="flex items-center space-x-4">
           <button
