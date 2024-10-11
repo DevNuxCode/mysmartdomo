@@ -8,6 +8,8 @@ import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 import Cart from './components/Cart'
 import ProductPage from './components/ProductPage'
+import Contact from './components/Contact'
+import About from './components/About'
 import { CartProvider } from './contexts/CartContext'
 import { LanguageProvider } from './contexts/LanguageContext'
 import { ThemeProvider } from './contexts/ThemeContext'
@@ -32,6 +34,8 @@ function App() {
                   </>
                 } />
                 <Route path="/product/:id" element={<ProductPage setIsCartOpen={setIsCartOpen} />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<About />} />
               </Routes>
               <Footer />
               {isCartOpen && <Cart onClose={() => setIsCartOpen(false)} />}
