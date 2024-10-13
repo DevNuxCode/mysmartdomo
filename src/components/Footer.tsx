@@ -28,8 +28,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">SmartHaven</h3>
-            <p className="text-gray-400">Transforming homes with smart technology</p>
+            <h3 className="text-lg font-semibold mb-4">SmartDomo</h3>
+            <p className="text-gray-400">{t('footer.t2')}</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h4>
@@ -42,14 +42,14 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
-            <p className="text-gray-400">1234 Smart Street</p>
-            <p className="text-gray-400">Techville, TX 12345</p>
-            <p className="text-gray-400">contact@smarthaven.com</p>
+            <p className="text-gray-400">SmartDomo Spa</p>
+            <p className="text-gray-400">Region Metropolitana, Chile </p>
+            <p className="text-gray-400">contact@smartdomo.com</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.followUs')}</h4>
             <div className="flex space-x-4 mb-4">
-              <a href="#" className="text-gray-400 hover:text-white"><Facebook /></a>
+              <a href="https://facebook.com" className="text-gray-400 hover:text-white"><Facebook /></a>
               <a href="#" className="text-gray-400 hover:text-white"><Twitter /></a>
               <a href="#" className="text-gray-400 hover:text-white"><Instagram /></a>
               <a href="#" className="text-gray-400 hover:text-white"><Linkedin /></a>
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 SmartHaven. {t('footer.rights')}</p>
+          <p>&copy; 2024 SmartDomo. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

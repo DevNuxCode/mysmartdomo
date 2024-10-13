@@ -3,23 +3,14 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
-
-// Import all blog posts
-import post1 from '../data/blog-posts/post1.md';
-import post2 from '../data/blog-posts/post2.md';
-import post3 from '../data/blog-posts/post3.md';
-import post4 from '../data/blog-posts/post4.md';
-import post5 from '../data/blog-posts/post5.md';
-import post6 from '../data/blog-posts/post6.md';
-
-const blogPosts = [post1, post2, post3, post4, post5, post6];
+import blogPosts from '../data/blogPost.json';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { t } = useLanguage();
   const { theme } = useTheme();
 
-  const post = blogPosts[Number(id) - 1];
+  const post = blogPosts.find(p => p.id === Number(id));
 
   if (!post) {
     return <div>Post not found</div>;
@@ -47,19 +38,19 @@ const BlogPost: React.FC = () => {
           &larr; {t('blog.backToBlog')}
         </Link>
         <article className="prose lg:prose-xl mx-auto">
-          <img src={post.attributes.image} alt={post.attributes.title} className="w-full h-64 object-cover rounded-lg mb-6" />
-          <h1>{post.attributes.title}</h1>
+          <img src={post.image} alt={post.title} className="w-full h-64 object-cover rounded-lg mb-6" />
+          <h1>{post.title}</h1>
           <p className="text-gray-600">
-            {t('blog.publishedOn')} {post.attributes.date} {t('blog.by')} {post.attributes.author}
+            {t('blog.publishedOn')} {post.date} {t('blog.by')} {post.author}
           </p>
           <div className="flex flex-wrap gap-2 mb-4">
-            {post.attributes.tags.map((tag: string, index: number) => (
+            {post.tags.map((tag: string, index: number) => (
               <span key={index} className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded">
                 {tag}
               </span>
             ))}
           </div>
-          <ReactMarkdown>{post.body}</ReactMarkdown>
+          <ReactMarkdown>{post.content}</ReactMarkdown>
         </article>
       </div>
     </div>

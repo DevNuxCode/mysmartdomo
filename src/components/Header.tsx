@@ -39,8 +39,11 @@ const Header: React.FC<HeaderProps> = ({ setIsCartOpen }) => {
     <header className={`${getThemeClasses()} shadow-sm sticky top-0 z-50`}>
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <Home className="h-8 w-8 text-blue-600" />
-          <span className="ml-2 text-xl font-bold">SmartHaven</span>
+          <Home className="h-8 w-8 text-blue-600" /> 
+          
+
+
+          <span className="ml-2 text-xl font-bold">SmartDomo</span>
         </Link>
         <div className="hidden md:flex space-x-6">
           <Link to="/" className="hover:text-blue-600">{t('nav.home')}</Link>

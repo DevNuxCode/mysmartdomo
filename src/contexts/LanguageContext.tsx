@@ -46,6 +46,7 @@ export const translations = {
     'footer.contact': 'Contact',
     'footer.followUs': 'Follow Us',
     'footer.rights': 'All rights reserved.',
+    'footer.t2': 'Transforming homes with smart technology',
     //testimonials
     'testimonials.title': 'Success Stories & Testimonials',
     'testimonials.successStories': 'Success Stories',
@@ -111,10 +112,10 @@ export const translations = {
     'features.energyDesc': 'Soluciones inteligentes para optimizar el uso de energía y reducir costos.',
     //producto
     'products.title': 'Productos Destacados',
-    'products.addToCart': 'Añadir al Carrito',
-    //carrito
-    'cart.title': 'Carrito',
-    'cart.empty': 'Tu carrito está vacío',
+    'products.addToCart': 'Añadir al Carro',
+    //Carro
+    'cart.title': 'Carro',
+    'cart.empty': 'Su Carro está vacío',
     'cart.subtotal': 'Subtotal',
     'cart.total': 'Total',
     'cart.checkout': 'Pagar',
@@ -123,6 +124,7 @@ export const translations = {
     'footer.contact': 'Contacto',
     'footer.followUs': 'Síguenos',
     'footer.rights': 'Todos los derechos reservados.',
+    'footer.t2': 'Transformando hogares con tecnologia inteligente',
     //testimonios
     'testimonials.title': 'Historias de Éxito y Testimonios',
     'testimonials.successStories': 'Historias de Éxito',
@@ -164,6 +166,8 @@ export const translations = {
     'blog.backToBlog': 'Volver al Blog',
     'blog.publishedOn': 'Publicado el',
     'blog.by': 'por',
+    
+
   },
 };
 

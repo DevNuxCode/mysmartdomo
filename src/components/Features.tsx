@@ -1,5 +1,5 @@
 import React from 'react'
-import { Smartphone, Shield, Settings } from 'lucide-react'
+import { Smartphone, Shield, Zap, Speech, } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useTheme } from '../contexts/ThemeContext'
 
@@ -14,12 +14,13 @@ const Features = () => {
       description: t('features.mobileControlDesc')
     },
     {
+
       icon: <Shield className="h-12 w-12 text-blue-600" />,
       title: t('features.security'),
       description: t('features.securityDesc')
     },
     {
-      icon: <Settings className="h-12 w-12 text-blue-600" />,
+      icon: <Zap className="h-12 w-12 text-blue-600" />,
       title: t('features.energy'),
       description: t('features.energyDesc')
     }

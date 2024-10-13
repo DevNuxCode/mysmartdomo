@@ -126,10 +126,16 @@ const Contact: React.FC = () => {
                 <Send className="w-5 h-5 mr-2" />
                 {t('contact.submit')}
               </button>
+              
             </div>
+            
           </form>
         </div>
       </div>
+
+      
+
+
     </div>
   );
 };
